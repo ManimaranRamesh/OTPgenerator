@@ -1,0 +1,9 @@
+import math,random
+def Otpgenerator():
+    digits='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    OTP=""
+    length_of_digits=len(digits)
+    for i in range(6):
+        OTP+=digits[math.floor(random.random()*length_of_digits)]
+    return OTP
+print("Your One time password is:",Otpgenerator())
